@@ -1,0 +1,12 @@
+{
+    "nitrosvmtestnet": {
+        "type": "native",
+        "decimals": 9,
+        "interchainGasPaymaster": ,
+      },
+      "solanadevnet": {
+        "type": "native",
+        "decimals": 9,
+        "interchainGasPaymaster": ,
+      }
+}

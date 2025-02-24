@@ -1,0 +1,22 @@
+{
+    "nitrosvmtestnet": {
+        "solanadevnet": {
+            "oracleConfig": {
+                "tokenExchangeRate": "1000000000000000000",
+                "gasPrice": "1",
+                "tokenDecimals": 9
+            },
+            "overhead": 100000
+        }
+    },
+    "solanadevtest": {
+        "nitrosvmtestnet": {
+            "oracleConfig": {
+                "tokenExchangeRate": "1000000000000000000",
+                "gasPrice": "1",
+                "tokenDecimals": 9
+            },
+            "overhead": 100000
+        }
+    }
+}

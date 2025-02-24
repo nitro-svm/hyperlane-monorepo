@@ -1,6 +1,7 @@
 use borsh::{BorshDeserialize, BorshSerialize};
 use solana_program::{
     account_info::AccountInfo,
+    msg,
     program::{invoke, invoke_signed},
     program_error::ProgramError,
     pubkey::Pubkey,
@@ -204,13 +205,16 @@ pub fn create_pda_account<'a>(
     new_pda_account: &AccountInfo<'a>,
     new_pda_signer_seeds: &[&[u8]],
 ) -> Result<(), ProgramError> {
+    msg!("❌ about to check lamports");
     if new_pda_account.lamports() > 0 {
+        msg!("❌ retrieving lamports");
         let required_lamports = rent
             .minimum_balance(space)
             .max(1)
             .saturating_sub(new_pda_account.lamports());
 
         if required_lamports > 0 {
+            msg!("❌ transferring lamports");
             invoke(
                 &system_instruction::transfer(payer.key, new_pda_account.key, required_lamports),
                 &[
@@ -221,18 +225,32 @@ pub fn create_pda_account<'a>(
             )?;
         }
 
+        msg!("❌ signing allocate on behalf of pda");
         invoke_signed(
             &system_instruction::allocate(new_pda_account.key, space as u64),
             &[new_pda_account.clone(), system_program.clone()],
             &[new_pda_signer_seeds],
         )?;
 
+        msg!("❌ signing assign on behalf of pda");
         invoke_signed(
             &system_instruction::assign(new_pda_account.key, owner),
             &[new_pda_account.clone(), system_program.clone()],
             &[new_pda_signer_seeds],
         )
     } else {
+        msg!("❌ creating new pda account");
+
+        msg!(
+            "❌ instruction data: {:?}",
+            system_instruction::create_account(
+                payer.key,
+                new_pda_account.key,
+                rent.minimum_balance(space).max(1),
+                space as u64,
+                owner,
+            )
+        );
         invoke_signed(
             &system_instruction::create_account(
                 payer.key,

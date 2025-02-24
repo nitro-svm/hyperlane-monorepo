@@ -1,7 +1,7 @@
 {
   "chains": {
-    "nitrosvmtest": {
-      "name": "nitrosvmtest",
+    "nitrosvmlocalnet": {
+      "name": "nitrosvmlocalnet",
       "chainId": 13440,
       "domainId": 13440,
       "mailbox": "FWNyEXJYU34MkNR2yg6XzBDKSkgBCVZomvmSud5QdTek",
@@ -23,8 +23,8 @@
         "mode": "sequence"
       }
     },
-    "solanalocaltest": {
-      "name": "solanalocaltest",
+    "solanalocalnet": {
+      "name": "solanalocalnet",
       "chainId": 13377,
       "domainId": 13377,
       "mailbox": "TyHFB91JTtREH6fpNsXFkjZzHc7T6fWefGZiEAG9qb6",

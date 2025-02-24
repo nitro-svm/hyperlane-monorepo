@@ -1,6 +1,6 @@
 {
-  "nitrosvmtest": {
-    "solanalocaltest": {
+  "nitrosvmlocalnet": {
+    "solanalocalnet": {
       "oracleConfig": {
         "tokenExchangeRate": "1000000000000000000",
         "gasPrice": "1",
@@ -9,8 +9,8 @@
       "overhead": 100000
     }
   },
-  "solanalocaltest": {
-    "nitrosvmtest": {
+  "solanalocalnet": {
+    "nitrosvmlocalnet": {
       "oracleConfig": {
         "tokenExchangeRate": "1000000000000000000",
         "gasPrice": "1",

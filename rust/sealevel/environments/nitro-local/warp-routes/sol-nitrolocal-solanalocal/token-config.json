@@ -1,9 +1,9 @@
 {
-  "nitrosvmtest": {
+  "nitrosvmlocalnet": {
     "type": "native",
     "decimals": 9
   },
-  "solanalocaltest": {
+  "solanalocalnet": {
     "type": "native",
     "decimals": 9
   }

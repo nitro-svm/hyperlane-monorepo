@@ -7,6 +7,7 @@ use solana_program::{
     account_info::{next_account_info, AccountInfo},
     entrypoint::ProgramResult,
     instruction::AccountMeta,
+    msg,
     program::set_return_data,
     program_error::ProgramError,
     pubkey::Pubkey,
@@ -220,6 +221,7 @@ fn initialize(program_id: &Pubkey, accounts: &[AccountInfo]) -> ProgramResult {
         access_control_pda_seeds!(access_control_pda_bump_seed),
     )?;
 
+    msg!("❌ store the created pda account");
     // Store the access control data.
     access_control_account.store(access_control_pda_account, false)?;
 
