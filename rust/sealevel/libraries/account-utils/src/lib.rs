@@ -240,17 +240,6 @@ pub fn create_pda_account<'a>(
         )
     } else {
         msg!("❌ creating new pda account");
-
-        msg!(
-            "❌ instruction data: {:?}",
-            system_instruction::create_account(
-                payer.key,
-                new_pda_account.key,
-                rent.minimum_balance(space).max(1),
-                space as u64,
-                owner,
-            )
-        );
         invoke_signed(
             &system_instruction::create_account(
                 payer.key,
