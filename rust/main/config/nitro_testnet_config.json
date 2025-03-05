@@ -76,7 +76,7 @@
       "protocol": "sealevel",
       "rpcUrls": [
         {
-          "http": "http://termina.technology:8899"
+          "http": "http://rpc.termina.technology"
         }
       ],
       "validatorAnnounce": "C9uc4dPjceqEVTPyeZmMtCG9iM7bMEyTnHfwWNDmUqTd"

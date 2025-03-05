@@ -56,7 +56,7 @@
         "protocol": "sealevel",
         "rpcUrls": [
             {
-                "http": "http://rpc.termina.technology:8899"
+                "http": "http://rpc.termina.technology"
             }
         ]
     }
