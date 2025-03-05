@@ -1,0 +1,85 @@
+{
+  "chains": {
+    "solanadevnet": {
+      "blockExplorers": [
+        {
+          "apiUrl": "https://explorer.solana.com?cluster=devnet",
+          "family": "other",
+          "name": "Solana Explorer",
+          "url": "https://explorer.solana.com?cluster=devnet"
+        }
+      ],
+      "blocks": {
+        "confirmations": 1,
+        "estimateBlockTime": 0.4,
+        "reorgPeriod": 0
+      },
+      "chainId": 1399811151,
+      "deployer": {
+        "name": "Abacus Works",
+        "url": "https://www.hyperlane.xyz"
+      },
+      "displayName": "Solana Devnet",
+      "displayNameShort": "Solana Devnet",
+      "domainId": 1399811151,
+      "gasCurrencyCoinGeckoId": "solana",
+      "index": {
+        "from": 1,
+        "mode": "sequence"
+      },
+      "interchainGasPaymaster": "9SC6gS9gq5KvhLa6hX94ipnkPLnMKVpaVdZtZdvpHjwP",
+      "interchainSecurityModule": "4BZSM8oJZTFhmbsoQf24s3wUDftMh541JmxCo5jwnQjW",
+      "isTestnet": true,
+      "mailbox": "31d3mrqye13K3VHdVVSHTrtykGEYbL9wuTXbSrKDb4H7",
+      "merkleTreeHook": "31d3mrqye13K3VHdVVSHTrtykGEYbL9wuTXbSrKDb4H7",
+      "name": "solanadevnet",
+      "nativeToken": {
+        "decimals": 9,
+        "name": "Solana",
+        "symbol": "SOL"
+      },
+      "protocol": "sealevel",
+      "rpcUrls": [
+        {
+          "http": "https://api.devnet.solana.com"
+        }
+      ],
+      "validatorAnnounce": "bao3y91Gu2HjiR1y7zitrW2nxcZ7CB67DGheHuHUiKh"
+    },
+    "nitrosvmtestnet": {
+      "blocks": {
+        "reorgPeriod": 0,
+        "confirmations": 0
+      },
+      "chainId": 13440,
+      "deployer": {
+        "name": "Nitro Labs",
+        "url": "https://termina.technology"
+      },
+      "domainId": 13440,
+      "gasCurrencyCoinGeckoId": "solana",
+      "index": {
+        "from": 1,
+        "mode": "sequence"
+      },
+      "interchainGasPaymaster": "6eRENt67geo9nUTUbPtcbxLjt3iba9F2oghHjSscxJ8r",
+      "interchainSecurityModule": "5ZmWqRZUL9YPgtutVeYowm5hQeLGYdm5hAZ5QsVBozLW",
+      "isTestnet": true,
+      "mailbox": "FmXnXb9Cto7DXxavjJFUGCibuYusmnCwgkQLWt5jnZXK",
+      "merkleTreeHook": "FmXnXb9Cto7DXxavjJFUGCibuYusmnCwgkQLWt5jnZXK",
+      "name": "nitrosvmtestnet",
+      "nativeToken": {
+        "decimals": 9,
+        "name": "Solana",
+        "symbol": "SOL"
+      },
+      "protocol": "sealevel",
+      "rpcUrls": [
+        {
+          "http": "http://rpc.termina.technology"
+        }
+      ],
+      "validatorAnnounce": "C9uc4dPjceqEVTPyeZmMtCG9iM7bMEyTnHfwWNDmUqTd"
+    }
+  }
+}

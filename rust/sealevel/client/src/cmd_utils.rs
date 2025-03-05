@@ -149,6 +149,8 @@ fn attempt_program_deploy(
         buffer_keypair_path.to_str().unwrap(),
         "--verbose",
         "--use-rpc",
+        "--max-len",
+        "500000",
     ];
 
     let compute_unit_price_str = compute_unit_price.to_string();

@@ -1,16 +1,16 @@
 {
-  "solanalocaltest": {
+  "solanalocalnet": {
     "chainId": 13377,
-    "name": "solanalocaltest",
+    "name": "solanalocalnet",
     "rpcUrls": [
       {
         "http": "http://127.0.0.1:8899"
       }
     ]
   },
-  "nitrosvmtest": {
+  "nitrosvmlocalnet": {
     "chainId": 13440,
-    "name": "nitrosvmtest",
+    "name": "nitrosvmlocalnet",
     "rpcUrls": [
       {
         "http": "http://127.0.0.1:12345"
