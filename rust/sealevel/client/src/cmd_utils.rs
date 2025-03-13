@@ -151,6 +151,8 @@ fn attempt_program_deploy(
         "--use-rpc",
         "--max-len",
         "500000",
+        "--max-sign-attempts",
+        "1",
     ];
 
     let compute_unit_price_str = compute_unit_price.to_string();

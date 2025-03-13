@@ -1,10 +1,10 @@
 {
-  "solanalocalnet": {
-    "hex": "0xb5e25b4f3f6f39871e14e19c0561f09dd36e8fe0e67d93e6a6aab3163f50b0f8",
-    "base58": "DEzz69TL9uP828eRWkNr9CLQrbFzAXd2SBz9HdBkzaa3"
-  },
   "nitrosvmlocalnet": {
-    "hex": "0xf5555a998217ab7efdd1520d062eead2b4f9b84d06180a9f4c5b52515b4fdb5f",
-    "base58": "HWgNf3TdeMG2vzgQX1WnKiTbUBvnvu4TUi6qvg7fKiia"
+    "hex": "0x14c5b1602e915582bfdc9c5c1a58bd8b0a3b6634a7811a6d5154144775b74fb8",
+    "base58": "2Q5zgciyayP4jB9BLSHftjHQTVDPZSBdrX2i8zJrPhAo"
+  },
+  "solanalocalnet": {
+    "hex": "0x63057491713e48818d4aeac2c75200cee55978bf625524bdefee9898af057e24",
+    "base58": "7fYBqSMrPi29LLjr98BhPTHwfqtKjYVk7h14C8enjB9m"
   }
 }

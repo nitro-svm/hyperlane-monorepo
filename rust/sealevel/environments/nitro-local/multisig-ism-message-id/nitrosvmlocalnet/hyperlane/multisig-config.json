@@ -1,0 +1,9 @@
+{
+  "solanalocalnet": {
+    "type": "messageIdMultisigIsm",
+    "threshold": 1,
+    "validators": [
+      "0x5C2B54188f7FEA7f3A3d452709c0b44e3ccd857F"
+    ]
+  }
+}

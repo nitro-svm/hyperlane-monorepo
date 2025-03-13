@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # The script:
 # - uses the desired version of the solana cli for building programs
@@ -15,7 +15,7 @@ SOLANA_CLI_VERSION_FOR_BUILDING_PROGRAMS="1.14.20"
 CORE_PROGRAM_PATHS=("mailbox" "ism/multisig-ism-message-id" "validator-announce" "hyperlane-sealevel-igp")
 TOKEN_PROGRAM_PATHS=("hyperlane-sealevel-token" "hyperlane-sealevel-token-collateral" "hyperlane-sealevel-token-native")
 
-build_program () {
+build_program() {
     PROGRAM_PATH=$1
     log "Building $PROGRAM_PATH"
     pushd $PROGRAM_PATH
@@ -23,7 +23,7 @@ build_program () {
     popd
 }
 
-build_programs () {
+build_programs() {
     # The list of programs to build
     PROGRAM_PATH_LIST=()
 
@@ -35,57 +35,56 @@ build_programs () {
 
     log "Building programs of type: $PROGRAM_TYPE"
 
-    if [ $PROGRAM_TYPE == "token" ] || [ $BUILD_ALL == "true" ] ; then
+    if [ $PROGRAM_TYPE == "token" ] || [ $BUILD_ALL == "true" ]; then
         PROGRAM_PATH_LIST+=("${TOKEN_PROGRAM_PATHS[@]}")
     fi
 
-    if [ $PROGRAM_TYPE == "core" ] || [ $BUILD_ALL == "true" ] ; then
+    if [ $PROGRAM_TYPE == "core" ] || [ $BUILD_ALL == "true" ]; then
         PROGRAM_PATH_LIST+=("${CORE_PROGRAM_PATHS[@]}")
     fi
 
     log "Building programs: ${PROGRAM_PATH_LIST[@]}"
 
     # Build the programs
-    for PROGRAM_PATH in "${PROGRAM_PATH_LIST[@]}"
-    do
+    for PROGRAM_PATH in "${PROGRAM_PATH_LIST[@]}"; do
         build_program $PROGRAM_PATH
     done
 }
 
-get_current_solana_cli_version () {
+get_current_solana_cli_version() {
     # `solana --version` expected output is:
     #    solana-cli 1.18.18 (src:83047136; feat:4215500110, client:SolanaLabs)
     # So we can use awk to get the second field
     echo $(solana --version | awk '{print $2}')
 }
 
-set_solana_cli_version () {
+set_solana_cli_version() {
     NEW_VERSION=$1
 
     sh -c "$(curl -sSfL https://release.solana.com/v$NEW_VERSION/install)"
 }
 
-log () {
+log() {
     echo "#### $@"
 }
 
 # Get the current version of the solana cli
 SOLANA_CLI_VERSION_AT_START=$(get_current_solana_cli_version)
 
-cleanup () {
+cleanup() {
     # Only reset if we changed the version in the first place
-    if [ "$SOLANA_CLI_VERSION_AT_START" != "$SOLANA_CLI_VERSION_FOR_BUILDING_PROGRAMS" ] && \
-       [ ! -z "$SOLANA_CLI_VERSION_AT_START" ]; then
+    if [ "$SOLANA_CLI_VERSION_AT_START" != "$SOLANA_CLI_VERSION_FOR_BUILDING_PROGRAMS" ] &&
+        [ ! -z "$SOLANA_CLI_VERSION_AT_START" ]; then
         log "Resetting Solana CLI version back to $SOLANA_CLI_VERSION_AT_START..."
         set_solana_cli_version $SOLANA_CLI_VERSION_AT_START
     fi
 }
 
-main () {
+main() {
     trap cleanup EXIT
 
     # If the current version is not the latest version, update the solana cli
-    if [ $SOLANA_CLI_VERSION_AT_START != $SOLANA_CLI_VERSION_FOR_BUILDING_PROGRAMS ] ; then
+    if [ $SOLANA_CLI_VERSION_AT_START != $SOLANA_CLI_VERSION_FOR_BUILDING_PROGRAMS ]; then
         log "Temporarily changing Solana CLI version from $SOLANA_CLI_VERSION_AT_START to $SOLANA_CLI_VERSION_FOR_BUILDING_PROGRAMS..."
         set_solana_cli_version $SOLANA_CLI_VERSION_FOR_BUILDING_PROGRAMS
     fi

@@ -9,7 +9,7 @@
             "overhead": 100000
         }
     },
-    "solanadevtest": {
+    "solanadevnet": {
         "nitrosvmtestnet": {
             "oracleConfig": {
                 "tokenExchangeRate": "1000000000000000000",

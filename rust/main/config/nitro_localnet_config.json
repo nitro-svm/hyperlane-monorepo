@@ -4,10 +4,10 @@
       "name": "nitrosvmlocalnet",
       "chainId": 13440,
       "domainId": 13440,
-      "mailbox": "FWNyEXJYU34MkNR2yg6XzBDKSkgBCVZomvmSud5QdTek",
-      "merkleTreeHook": "FWNyEXJYU34MkNR2yg6XzBDKSkgBCVZomvmSud5QdTek",
-      "interchainGasPaymaster": "8XgxrUnrPkVSTaPQgjuLWNBrz5i1Tm7awCzYpcEF86fE",
-      "validatorAnnounce": "BSr2s7xetGbGoqDeBH77ULwrcZzLciKcyK9VLhr34c5N",
+      "mailbox": "ExpaLUBH2W6jnxrs86VeUVGCdfJ7xuB1k2QAHBo2mfd1",
+      "merkleTreeHook": "ExpaLUBH2W6jnxrs86VeUVGCdfJ7xuB1k2QAHBo2mfd1",
+      "interchainGasPaymaster": "F8vu99RDVaxHFJBZCHyf24W2a42kN18sAox4Cq2U7sQZ",
+      "validatorAnnounce": "GEsTL2urK6kTubzSox7utWmpYXmA2jrqbEL6JRPbZ5k3",
       "protocol": "sealevel",
       "blocks": {
         "reorgPeriod": 0,
@@ -15,7 +15,7 @@
       },
       "rpcUrls": [
         {
-          "http": "http://127.0.0.1:12345"
+          "http": "http://127.0.0.1:8999/rpc"
         }
       ],
       "index": {
@@ -27,10 +27,10 @@
       "name": "solanalocalnet",
       "chainId": 13377,
       "domainId": 13377,
-      "mailbox": "TyHFB91JTtREH6fpNsXFkjZzHc7T6fWefGZiEAG9qb6",
-      "merkleTreeHook": "TyHFB91JTtREH6fpNsXFkjZzHc7T6fWefGZiEAG9qb6",
-      "interchainGasPaymaster": "3VTG2jKyqBKNzg7zsrp4w7MXiAMGEVYhoK8ZoLqqxKJd",
-      "validatorAnnounce": "EPn3BVcZhxEWjPQmALPeV8vR1YdtUhvGBaDFmsSfWAa6",
+      "mailbox": "GhPnjbmBYV5mkaaLTyVJH8wXiQqn6pYGQTh4R6oufM54",
+      "merkleTreeHook": "GhPnjbmBYV5mkaaLTyVJH8wXiQqn6pYGQTh4R6oufM54",
+      "interchainGasPaymaster": "AiiBEZPPS9qeDF28tECQYXRtvoFfsevRJ8U9rokFkT5b",
+      "validatorAnnounce": "EzXcRFiwtTKbN7kabQbz9UAAcm4GLWd8NdmyBeHZEAL8",
       "protocol": "sealevel",
       "blocks": {
         "reorgPeriod": 0,
