@@ -27,11 +27,11 @@
         "from": 1,
         "mode": "sequence"
       },
-      "interchainGasPaymaster": "9SC6gS9gq5KvhLa6hX94ipnkPLnMKVpaVdZtZdvpHjwP",
-      "interchainSecurityModule": "4BZSM8oJZTFhmbsoQf24s3wUDftMh541JmxCo5jwnQjW",
+      "interchainGasPaymaster": "8QtkWNZbWYC6vN1dxNCpLGHrFRUNA7JpgUDJfXqKzGkk",
+      "interchainSecurityModule": "4NKQRdrffRCNH94eRj6DjkwbkZ6NJaJz3FcUdnV5b6af",
       "isTestnet": true,
-      "mailbox": "31d3mrqye13K3VHdVVSHTrtykGEYbL9wuTXbSrKDb4H7",
-      "merkleTreeHook": "31d3mrqye13K3VHdVVSHTrtykGEYbL9wuTXbSrKDb4H7",
+      "mailbox": "7bVysKSkVAmT3qjdVMEyEVrgBx4atMBtao7gX799SHYp",
+      "merkleTreeHook": "7bVysKSkVAmT3qjdVMEyEVrgBx4atMBtao7gX799SHYp",
       "name": "solanadevnet",
       "nativeToken": {
         "decimals": 9,
@@ -44,7 +44,7 @@
           "http": "https://api.devnet.solana.com"
         }
       ],
-      "validatorAnnounce": "bao3y91Gu2HjiR1y7zitrW2nxcZ7CB67DGheHuHUiKh"
+      "validatorAnnounce": "7BtfNgJZPPz6YTHGp13JuWe6A6azUxmBuw4aFQekEpAu"
     },
     "nitrosvmtestnet": {
       "blocks": {
@@ -62,11 +62,11 @@
         "from": 1,
         "mode": "sequence"
       },
-      "interchainGasPaymaster": "6eRENt67geo9nUTUbPtcbxLjt3iba9F2oghHjSscxJ8r",
-      "interchainSecurityModule": "5ZmWqRZUL9YPgtutVeYowm5hQeLGYdm5hAZ5QsVBozLW",
+      "interchainGasPaymaster": "5g5QYReSSZujSeEC4UbuPiKWYSq6CperHiZ8DLKm2yCf",
+      "interchainSecurityModule": "3d66PUPWBtrkKzT42xZSpTDoWid6vMtBMHMnZvQxJaa4",
       "isTestnet": true,
-      "mailbox": "FmXnXb9Cto7DXxavjJFUGCibuYusmnCwgkQLWt5jnZXK",
-      "merkleTreeHook": "FmXnXb9Cto7DXxavjJFUGCibuYusmnCwgkQLWt5jnZXK",
+      "mailbox": "7hFbauzs6PpVtsLFmN34rvwMQBh1Aevdwi9Pt42ALSL",
+      "merkleTreeHook": "7hFbauzs6PpVtsLFmN34rvwMQBh1Aevdwi9Pt42ALSL",
       "name": "nitrosvmtestnet",
       "nativeToken": {
         "decimals": 9,
@@ -79,7 +79,7 @@
           "http": "http://rpc.termina.technology"
         }
       ],
-      "validatorAnnounce": "C9uc4dPjceqEVTPyeZmMtCG9iM7bMEyTnHfwWNDmUqTd"
+      "validatorAnnounce": "8NaPEmpEbY8Nj3a5NYniUXEojnGwhrkispexhcHZX77Z"
     }
   }
 }
