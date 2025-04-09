@@ -62,11 +62,11 @@
         "from": 1,
         "mode": "sequence"
       },
-      "interchainGasPaymaster": "5g5QYReSSZujSeEC4UbuPiKWYSq6CperHiZ8DLKm2yCf",
-      "interchainSecurityModule": "3d66PUPWBtrkKzT42xZSpTDoWid6vMtBMHMnZvQxJaa4",
+      "interchainGasPaymaster": "9B6nkwp4Tup7QbNLwku5ZudtFQx2NiSK2SgJDxs6Jt7A",
+      "interchainSecurityModule": "AKfwhWgnf8b1ET8JTKFFxkUJxfswMDkgR3rBYpcd2hU7",
       "isTestnet": true,
-      "mailbox": "7hFbauzs6PpVtsLFmN34rvwMQBh1Aevdwi9Pt42ALSL",
-      "merkleTreeHook": "7hFbauzs6PpVtsLFmN34rvwMQBh1Aevdwi9Pt42ALSL",
+      "mailbox": "4UpZnDVReudJqRowPKo3TDKmRP7jyPVPMt2t9D88dEgC",
+      "merkleTreeHook": "4UpZnDVReudJqRowPKo3TDKmRP7jyPVPMt2t9D88dEgC",
       "name": "nitrosvmtestnet",
       "nativeToken": {
         "decimals": 9,
@@ -79,7 +79,7 @@
           "http": "http://rpc.termina.technology"
         }
       ],
-      "validatorAnnounce": "8NaPEmpEbY8Nj3a5NYniUXEojnGwhrkispexhcHZX77Z"
+      "validatorAnnounce": "2xQnQsu2sQciV7HkTj6D2V3Kt8aHZPRvDTkS2dZowSzs"
     }
   }
 }

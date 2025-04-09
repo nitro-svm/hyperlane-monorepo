@@ -1,7 +1,7 @@
-Command for running the rollup (inside of `svm-rollup/crates/rollup`):
+1. Command for running the rollup:
 
 ```bash
-make run-mock
+just rollup run-mock
 ```
 
 With changing the https config to:
@@ -11,31 +11,41 @@ With changing the https config to:
 bind_port = 8999
 ```
 
-Command for running the solana test validator:
+2. Command for running the solana test validator:
 
 ```bash
 solana-test-validator
 ```
 
-Command for deploying core to nitrosvmlocalnet:
+3. Command for deploying core to nitrosvmlocalnet:
 
 ```bash
-cargo run -- -k ~/.config/solana/id.json --url http://localhost:8999/rpc \
+cargo run -- -k ~/.config/solana/id.json -u http://localhost:8999/rpc \
         core deploy --environment nitro-local \
         --environments-dir ../environments/ --chain nitrosvmlocalnet \
         --built-so-dir ../target/deploy/ --local-domain 13440
 ```
 
-Command for deploying core to solanalocalnet:
+4. Command for deploying core to solanalocalnet:
 
 ```bash
-cargo run -- -k ~/.config/solana/id.json --url http://localhost:8899 \
+cargo run -- -k ~/.config/solana/id.json -u http://localhost:8899 \
         core deploy --environment nitro-local \
         --environments-dir ../environments/ --chain solanalocalnet \
         --built-so-dir ../target/deploy/ --local-domain 13377
 ```
 
-Command for deploying the warp route:
+5. Command for ISM configuration:
+
+```bash
+cargo run -- -k ~/.config/solana/id.json -u http://localhost:8999/rpc \
+        multisig-ism-message-id configure \
+        --program-id 7hWAvb6Y8vMpniQpBWpx7jN5BSZXLU7DbqRHh2heCLZs \
+        --chain-config-file ../environments/nitro-local/chain-config.json \
+        --multisig-config-file ../environments/nitro-local/multisig-ism-message-id/nitrosvmlocalnet/hyperlane/multisig-config.json
+```
+
+6. Command for deploying the warp route:
 
 ```bash
 cargo run -- -k ~/.config/solana/id.json \
@@ -48,7 +58,26 @@ cargo run -- -k ~/.config/solana/id.json \
         --ata-payer-funding-amount 10000000
 ```
 
-Command for validator:
+7. Command for IGP configuration:
+
+```bash
+cargo run -- -k ~/.config/solana/id.json -u http://localhost:8899 \
+        igp configure \
+        --program-id CpP9nXDsQsifneJgwZ3pX8iwFUFGk5Bu3Ph5gdyeN7zw \
+        --gas-oracle-config-file ../environments/nitro-local/gas-oracle-configs.json \
+        --chain-config-file ../environments/nitro-local/chain-config.json \
+        --chain solanadevnet
+```
+
+8. Command for querying the Token collateral account of a warp route deployment:
+
+```bash
+cargo run -- -k ~/.config/solana/id.json -u http://localhost:8899 \
+        token query \
+        --program-id FBxoyKyCe4rYkJQMVUFYqV1U7WdeC2WVV8m1RuDHZrrY native
+```
+
+9. Command for validator:
 
 ```bash
 cargo run -p validator --release -- \
@@ -60,27 +89,7 @@ cargo run -p validator --release -- \
         --checkpointSyncer.path "/tmp/hyperlane-validator-signatures-svm"
 ```
 
-Command for relayer:
-
-```bash
-cargo run -p relayer --release -- \
-        --config-path ./config/nitro_localnet_config.json \
-        --relayChains nitrosvmlocalnet,solanalocalnet \
-        --allowLocalCheckpointSyncers true \
-        --defaultSigner.key "0xb48bc90c3fb62d1e72ee5481ce5659e6c1261f7db8e4ba26c657dc8c9fe937e0"
-```
-
-Command for ISM configuration:
-
-```bash
-cargo run -- -k ~/.config/solana/id.json --url http://localhost:8999/rpc \
-        multisig-ism-message-id configure \
-        --program-id 7hWAvb6Y8vMpniQpBWpx7jN5BSZXLU7DbqRHh2heCLZs \
-        --chain-config-file ../environments/nitro-local/chain-config.json \
-        --multisig-config-file ../environments/nitro-local/multisig-ism-message-id/nitrosvmlocalnet/hyperlane/multisig-config.json
-```
-
-Command for validator announce:
+10. Command for validator announce:
 
 ```bash
 cargo run -- -k ~/.config/solana/id.json -u http://localhost:8899/ \
@@ -91,30 +100,21 @@ cargo run -- -k ~/.config/solana/id.json -u http://localhost:8899/ \
         --signature 0x5e9a7ae15ac3657d8c9da45cf7b9690bf59d7454572428134a356a426653f95d28e558943cd04c13d79796c030e64d5a716f2ce388214a50c4ed012e5747c6fb1c
 ```
 
-Command for token transfer:
+11. Command for relayer:
+
+```bash
+cargo run -p relayer --release -- \
+        --config-path ./config/nitro_localnet_config.json \
+        --relayChains nitrosvmlocalnet,solanalocalnet \
+        --allowLocalCheckpointSyncers true \
+        --defaultSigner.key "0xb48bc90c3fb62d1e72ee5481ce5659e6c1261f7db8e4ba26c657dc8c9fe937e0"
+```
+
+12. Command for token transfer:
 
 ```bash
 cargo run -- -k ~/.config/solana/id.json -u http://localhost:8899 \
         token transfer-remote ~/.config/solana/id.json \
         100000 13440 2MCVmcuUcREwQKDS3HazuYctkkbZV3XRMspM5eLWRZUV \
         native --program-id 7fYBqSMrPi29LLjr98BhPTHwfqtKjYVk7h14C8enjB9m
-```
-
-Command for IGP configuration:
-
-```bash
-cargo run -- -k ~/.config/solana/id.json -u https://api.devnet.solana.com \
-        igp configure \
-        --program-id CpP9nXDsQsifneJgwZ3pX8iwFUFGk5Bu3Ph5gdyeN7zw \
-        --gas-oracle-config-file ../environments/nitro-test/gas-oracle-configs.json \
-        --chain-config-file ../environments/nitro-test/chain-config.json \
-        --chain solanadevnet
-```
-
-Command for querying the Token collateral account of a warp route deployment:
-
-```bash
-cargo run -- -k ~/.config/solana/id.json -u https://api.devnet.solana.com \
-        token query \
-        --program-id FBxoyKyCe4rYkJQMVUFYqV1U7WdeC2WVV8m1RuDHZrrY native
 ```

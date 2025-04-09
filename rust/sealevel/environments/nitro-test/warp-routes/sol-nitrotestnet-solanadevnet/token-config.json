@@ -2,7 +2,7 @@
   "nitrosvmtestnet": {
     "type": "native",
     "decimals": 9,
-    "interchainGasPaymaster": "5g5QYReSSZujSeEC4UbuPiKWYSq6CperHiZ8DLKm2yCf"
+    "interchainGasPaymaster": "9B6nkwp4Tup7QbNLwku5ZudtFQx2NiSK2SgJDxs6Jt7A"
   },
   "solanadevnet": {
     "type": "native",
