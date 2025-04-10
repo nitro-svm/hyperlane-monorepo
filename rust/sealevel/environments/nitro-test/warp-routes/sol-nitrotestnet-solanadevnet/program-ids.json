@@ -1,10 +1,10 @@
 {
-  "nitrosvmtestnet": {
-    "hex": "0xb749d06e21a9385d5c46ade4d7bb07348915c792849f84cf1546fb7bf09a53a5",
-    "base58": "DLUte4EM98j8Dk56xFpX15aJoDs3fxBBrX2FpZMxRDSU"
-  },
   "solanadevnet": {
     "hex": "0xd2d2878a647dca5527c481c872a8763567c31dd71dc0fd2c9ec0d75738b15d9d",
     "base58": "FBxoyKyCe4rYkJQMVUFYqV1U7WdeC2WVV8m1RuDHZrrY"
+  },
+  "nitrosvmtestnet": {
+    "hex": "0x3d46b1de4d7bb72eb17b0d618f9fac0188b5a72e23928d0c4cb36f049a6e69c0",
+    "base58": "58CPm3ERePAYxX24kt4cATdNLVtWFrjZAHYuQBea4zzj"
   }
 }
