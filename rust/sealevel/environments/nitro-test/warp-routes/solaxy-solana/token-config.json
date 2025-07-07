@@ -1,0 +1,16 @@
+{
+  "solanadevnet": {
+    "type": "collateral",
+    "decimals": 6,
+    "token": "HENCGCJGPczwzWRvGYeJrkHVo6eKcipREMXK9iV2xgTD",
+    "interchainGasPaymaster": "8QtkWNZbWYC6vN1dxNCpLGHrFRUNA7JpgUDJfXqKzGkk",
+    "splTokenProgram": "token"
+  },
+  "nitrosvmtestnet": {
+    "type": "native",
+    "decimals": 6,
+    "interchainGasPaymaster": "5g5QYReSSZujSeEC4UbuPiKWYSq6CperHiZ8DLKm2yCf",
+    "name": "Solaxy (devnet)",
+    "symbol": "SOLX"
+  }
+}

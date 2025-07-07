@@ -1,12 +1,12 @@
 {
     "solanadevnet": {
         "blockExplorers": [
-          {
-            "apiUrl": "https://explorer.solana.com?cluster=devnet",
-            "family": "other",
-            "name": "Solana Explorer",
-            "url": "https://explorer.solana.com?cluster=devnet"
-          }
+            {
+                "apiUrl": "https://explorer.solana.com?cluster=devnet",
+                "family": "other",
+                "name": "Solana Explorer",
+                "url": "https://explorer.solana.com?cluster=devnet"
+            }
         ],
         "blocks": {
             "confirmations": 1,
@@ -56,7 +56,7 @@
         "protocol": "sealevel",
         "rpcUrls": [
             {
-                "http": "http://rpc.termina.technology"
+                "http": "https://devnet.rpc.solaxy.io"
             }
         ]
     }

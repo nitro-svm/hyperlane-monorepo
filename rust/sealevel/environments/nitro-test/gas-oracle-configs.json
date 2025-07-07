@@ -12,9 +12,9 @@
     "solanadevnet": {
         "nitrosvmtestnet": {
             "oracleConfig": {
-                "tokenExchangeRate": "1000000000000000000",
+                "tokenExchangeRate": "1000000000000000",
                 "gasPrice": "1",
-                "tokenDecimals": 9
+                "tokenDecimals": 6
             },
             "overhead": 100000
         }

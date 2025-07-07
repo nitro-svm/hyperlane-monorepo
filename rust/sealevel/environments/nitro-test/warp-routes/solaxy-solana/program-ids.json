@@ -1,0 +1,10 @@
+{
+  "solanadevnet": {
+    "hex": "0x137e56ac6159e21dedc81bb4a4043f44c096e25734ad5c6ac546e7c3a46d0e04",
+    "base58": "2K6UtAfXsCU9njik4ZuQvR44nZvoB9aR3TaSCzYgmcMZ"
+  },
+  "nitrosvmtestnet": {
+    "hex": "0x3f6a83e76a561679a853844d190d1c56432733daec3b9a4b5fa5ce671bf96b12",
+    "base58": "5GYtUqfPF167kuxnYEZzsUEpx8UiH9ZNvkNn2EuHcVG5"
+  }
+}
